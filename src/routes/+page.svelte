@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	/** @type {import('./$types').PageData} */
+	import Games from '../components/Games.svelte';
+	/**
+	 * @type {any}
+	 */
+	export let data;
+</script>
+
+<section>
+	<Games games={data.props.games} />
+</section>
